@@ -30,7 +30,7 @@ Pogggo *should* be "minimally viable" by midnight on Sunday, January 14th.
 
 ##### <em>What text formats are transcriptions delivered?</em>
 All submissions will be transcribed and delivered in
-- Plane text
+- Plain text
 - Rich text
 - PDF
 - Apple Pages

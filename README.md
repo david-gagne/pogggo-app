@@ -35,3 +35,7 @@ All submissions will be transcribed and delivered in
 - PDF
 - Apple Pages
 - MS Word
+
+##### <em>I'm a content entrepreneur. How can I help make this happen?</em>
+- Send an email to buildpax[at]pogggo.com
+- Get at me [here](https://twitter.com/buildpax).

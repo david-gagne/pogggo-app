@@ -7,4 +7,9 @@ router.get('/', function(req, res, next) {
   res.render('index', {audience: audience});
 });
 
+// GET pricing page
+router.get('/pricing', function(req, res) {
+  res.render('pricing');
+});
+
 module.exports = router;

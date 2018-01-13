@@ -55,6 +55,63 @@ html, body {
   text-decoration: underline;
 }
 
+.content__title--parenthesis {
+  font-size: inherit;
+  margin-bottom: 5px;
+  width: 280px;
+  padding-top: 5px;
+}
+
+.content__title--pricing-page {
+  font-size: 30px;
+  margin: 0 auto;
+  text-align: left;
+  padding-bottom: 5px;
+}
+
+.divider {
+  width: 280px;
+  margin: 10px auto;
+  height: 2px;
+  background-color: #020402;
+}
+
+/* toggle switch css */
+
+/** - - - - - - - - - - - - - - - - - -
+ * Cosas del switch...
+ */
+input[type="checkbox"]#toggle {
+  display: none;
+  /* Estado ON */
+}
+input[type="checkbox"]#toggle ~ label[for="toggle"] {
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  width: 100px;
+  display: inline-block;
+  background-color: #020402;
+  border-radius: 5px;
+  padding: 2px;
+  margin: 0 auto;
+  /* Estado OFF */
+}
+input[type="checkbox"]#toggle ~ label[for="toggle"]::before {
+  content: '';
+  display: block;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #d5d2ec;
+  transition: all 0.3s cubic-bezier(1, 0.01, 0, 1);
+}
+input[type="checkbox"]#toggle:checked ~ label[for="toggle"]::before {
+  margin-left: calc(100% - 25px);
+  background-color: #75cfaa;
+}
+/* end toggle switch css */
+
 .button {
   width: 160px;
   height: 40px;
@@ -72,7 +129,7 @@ html, body {
 .copyright {
   font-size: 11px;
   font-family: inherit;
-  position: absolute;
+  position: fixed;
   bottom: 10px;
   padding-left: 10px;
 }
@@ -97,6 +154,10 @@ html, body {
 
 .menu__item {
   margin: 40px 0;
+}
+
+.menu__link {
+  color: inherit;
 }
 
 .color__green {

@@ -1,20 +1,28 @@
-<!-- TODO: complete homepage façade -->
-
 <% include partials/header %>
 
 <div class="header">
   <div class="header header--right">
     <button class="hamburger hamburger--elastic" type="button">
       <span class="hamburger-box">
-        <span class="hamburger-inner"></span>
+        <span class="hamburger-inner" style="color: #fff"></span>
       </span>
     </button>
   </div>
 
   <div class="logo">
-    <img class="logo__image" src="/images/pogggoLogo.png" alt="">
+  <a class="logo__image" href="/"><img class="logo__image" src="/images/pogggoLogo.svg" alt=""></a>
   </div>
 </div>
 
+<div class="content">
+  <h1 class="content__title">
+    <span class="content__title--target">Podcast</span> to Text in 24 Hours, or it's free.
+  </h1>
 
-<!-- <% include partials/footer %> -->
+  <button class="button">Upload Audio</button>
+  <p class="note">(Upload limit: 1GB; .mp3, .m4a, .mp4)</p>
+
+</div>
+
+<% include partials/menu %>
+<% include partials/footer %>

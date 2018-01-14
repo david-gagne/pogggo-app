@@ -8,11 +8,77 @@
 
   <div class="divider"></div>
 
-<%# toggle switch compliments of Fernando Saldaña https://codepen.io/heyfher/ %>
-  <div class="toggle-switch">
-    <input type="checkbox" id="toggle"/>
-    <label for="toggle"></label>
+  <div class="pricing__options">
+    <span class="option__monthly">Monthly</span>
+
+    <%# toggle switch compliments of Fernando Saldaña https://codepen.io/heyfher/ %>
+    <span class="toggle-switch">
+      <input type="checkbox" id="toggle"/>
+      <label for="toggle"></label>
+    </span>
+
+    <span class="option__yearly">Yearly</span>
   </div>
+
+<div class="section section__pricing">
+  <%# price 1 %>
+  <div id="price1">
+    <div class="container__pricing">
+      <p class="minutes">500
+        <span class="minutes__acronym">mins</span>
+      </p>
+      <p class="frequency">Per month</p>
+      <p id="priceOne" class="price">$49.99</p>
+    </div>
+    <p class="savings">20% savings!</p>
+    <button class="section__pricing--selector">Choose Plan</button>
+  </div>
+  <%# price 2 %>
+  <div id="price2">
+    <div class="container__pricing">
+      <p class="minutes">2500
+        <span class="minutes__acronym">mins</span>
+      </p>
+      <p class="frequency">Per month</p>
+      <p id="priceTwo" class="price">$149.99</p>
+    </div>
+    <p class="savings">30% savings!</p>
+    <button class="section__pricing--selector">Choose Plan</button>
+  </div>
+  <%# price 3 %>
+  <div id="price3">
+    <div class="container__pricing">
+      <p class="minutes">5000
+        <span class="minutes__acronym">mins</span>
+      </p>
+      <p class="frequency">Per month</p>
+      <p id="priceThree" class="price">$299.99</p>
+    </div>
+    <p class="savings">40% savings!</p>
+    <button class="section__pricing--selector">Choose Plan</button>
+  </div>
+
+  <div class="section__features">
+    <div class="divider divider--grid"></div>
+    <p class="features">No contract</p>
+    <p class="features">Plain Text</p>
+    <p class="features">Rich Text</p>
+    <p class="features">PDF</p>
+    <p class="features">Apple Pages</p>
+    <p class="features">MS Word</p>
+  </div>
+</div>
+
+<div class="divider hidden"></div>
+
+<div class="section__features hidden">
+  <p class="features">No contract</p>
+  <p class="features">Plain Text</p>
+  <p class="features">Rich Text</p>
+  <p class="features">PDF</p>
+  <p class="features">Apple Pages</p>
+  <p class="features">MS Word</p>
+</div>
 
 </div>
 

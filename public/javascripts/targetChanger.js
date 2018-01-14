@@ -1,7 +1,7 @@
 let audience = ["Podcast", "Broadcast", "Video"];
 let target = document.querySelector("body > div.content > h1 > span");
 
-setInterval(function() {
+let changer = setInterval(function() {
     switch (target.innerText) {
       case "Podcast":
         target.innerText = audience[1];

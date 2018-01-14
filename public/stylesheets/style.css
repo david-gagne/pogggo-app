@@ -1,12 +1,19 @@
 html, body {
   width: 100vw;
-  height: 100vh;
   margin: 0 auto;
   background-color: #fff;
   font-family: "Nunito", sans-serif;
   color: #020402;
   -webkit-appearance: none;
-  overflow: hidden;
+  overflow-x: hidden;
+}
+
+body {
+  height: 100%;
+}
+
+.restrictScroll {
+  overflow-y: hidden;
 }
 
 .header {
@@ -76,11 +83,42 @@ html, body {
   background-color: #020402;
 }
 
+.pricing__options {
+  width: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+}
 /* toggle switch css */
 
 /** - - - - - - - - - - - - - - - - - -
  * Cosas del switch...
  */
+
+.toggle-switch {
+  display: flex;
+  align-self: center;
+}
+
+.option__monthly {
+  position: relative;
+  right: 10px;
+  font-size: 20px;
+  transition: .3s;
+}
+
+.option__yearly {
+  position: relative;
+  left: 10px;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.inactive {
+  opacity: 0.5;
+}
+
 input[type="checkbox"]#toggle {
   display: none;
   /* Estado ON */
@@ -103,14 +141,98 @@ input[type="checkbox"]#toggle ~ label[for="toggle"]::before {
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background-color: #d5d2ec;
+  background-color: #87FF86;
   transition: all 0.3s cubic-bezier(1, 0.01, 0, 1);
 }
 input[type="checkbox"]#toggle:checked ~ label[for="toggle"]::before {
   margin-left: calc(100% - 25px);
-  background-color: #75cfaa;
+  background-color: #87FF86;
 }
 /* end toggle switch css */
+
+.container__pricing {
+  width: 200px;
+  height: 180px;
+  margin: 30px auto;
+  border-radius: 5%;
+  border: 4px solid #020402;
+}
+
+.minutes {
+  text-align: center;
+  font-size: 48px;
+  margin: 10px auto;
+}
+
+.minutes__acronym {
+  font-size: 20px;
+  margin-left: -10px;
+}
+
+.frequency {
+  text-align: left;
+  margin: -20px auto;
+  padding-left: 37px;
+}
+
+#price2 > div > p.frequency {
+  padding-left: 22px;
+}
+
+#price3 > div > p.frequency {
+  padding-left: 22px;
+}
+
+.price {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 40px;
+  position: relative;
+  top: 40px;
+}
+
+.savings {
+  margin: 0 auto;
+  width: 208px;
+  text-align: center;
+  position: relative;
+  top: -23px;
+  display: none;
+}
+
+.showSavings {
+  display: block;
+}
+
+.section__pricing--selector {
+  width: 208px;
+  height: 34px;
+  text-align: center;
+  margin: 5px auto;
+  background-color: #87FF86;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #87FF86;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -25px;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: inherit;
+}
+
+.section__features {
+  margin: 20px auto;
+  margin-bottom: 100px;
+}
+
+.features {
+  width: 208px;
+  text-align: center;
+  margin: 10px auto;
+  font-size: 20px;
+}
 
 .button {
   width: 160px;
@@ -129,9 +251,10 @@ input[type="checkbox"]#toggle:checked ~ label[for="toggle"]::before {
 .copyright {
   font-size: 11px;
   font-family: inherit;
-  position: fixed;
-  bottom: 10px;
+  position: absolute;
+  bottom: 1%;
   padding-left: 10px;
+  color: inherit;
 }
 
 .menu {
@@ -164,7 +287,7 @@ input[type="checkbox"]#toggle:checked ~ label[for="toggle"]::before {
   color: #87FF86;
 }
 
-.menu__item:hover, .menu__item::selection {
+.menu__item:hover {
   text-decoration: underline;
 }
 
@@ -185,6 +308,10 @@ input[type="checkbox"]#toggle:checked ~ label[for="toggle"]::before {
   text-align: center;
 }
 
+.hidden {
+  display: none;
+}
+
 /* media queries */
 @media screen and (min-width: 600px) and (max-width: 999px) {
   .logo {
@@ -198,6 +325,51 @@ input[type="checkbox"]#toggle:checked ~ label[for="toggle"]::before {
 
   .content__title {
     font-size: 50px;
+  }
+
+  .content__title--pricing-page {
+    font-size: 50px;
+    width: 440px;
+  }
+
+  .content__title--parenthesis {
+    font-size: 50px;
+    width: 446px;
+  }
+
+  .pricing__options {
+    width: 440px;
+  }
+
+  .section__pricing {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 260px;
+    width: 440px;
+    margin: 0 auto;
+    grid-column-gap: 20px;
+    margin-bottom: 200px;
+    padding-bottom: 20px;
+  }
+
+  .section__features {
+    width: 100%;
+  }
+
+  .divider {
+    width: 440px;
+  }
+
+  .divider--grid {
+    width: 100%;
+  }
+
+  .option__monthly {
+    font-size: 30px;
+  }
+
+  .option__yearly {
+    font-size: 30px;
   }
 
   .menu__items {
@@ -234,6 +406,87 @@ input[type="checkbox"]#toggle:checked ~ label[for="toggle"]::before {
 
   .content__title {
     font-size: 85px;
+  }
+
+  .content__title--pricing-page {
+    font-size: 90px;
+    width: 860px;
+  }
+
+  .content__title--parenthesis {
+    font-size: 96px;
+    width: 860px;
+  }
+
+  .pricing__options {
+    width: 440px;
+  }
+
+  .price {
+    font-size: 64px;
+  }
+
+  .section__pricing {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 410px;
+    width: 860px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    margin-bottom: 200px;
+  }
+
+  .container__pricing {
+    width: 300px;
+    height: 280px;
+  }
+
+  .minutes {
+    font-size: 77px;
+  }
+
+  .minutes__acronym {
+    font-size: 30px;
+  }
+
+  .frequency {
+    font-size: 20px;
+    padding-left: 46px;
+  }
+
+  .divider {
+    width: 860px;
+    height: 4px;
+  }
+
+  .divider--grid {
+    width: 100%;
+  }
+
+  .option__monthly {
+    font-size: 50px;
+  }
+
+  .option__yearly {
+    font-size: 50px;
+  }
+
+  .section__pricing--selector {
+    width: 300px;
+    height: 50px;
+    font-size: 24px;
+  }
+
+  .section__features {
+    width: 100%;
+  }
+
+  .savings {
+    font-size: 30px;
+  }
+
+  .features {
+    font-size: 35px;
   }
 
   .menu__items {

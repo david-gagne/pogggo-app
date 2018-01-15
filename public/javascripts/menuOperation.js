@@ -3,12 +3,14 @@ let menuButton = document.querySelector("body > div.header > div.header.header--
 let menuModal = document.querySelector("body > div.menu");
 let modalMenuButton = document.getElementById("modalMenuButton");
 let body = document.querySelector("body");
+let html = document.querySelector("html");
 
 menuBars.addEventListener("click", function() {
   menuModal.classList.remove("hide");
   menuModal.classList.toggle("show");
   modalMenuButton.classList.add("is-active");
   body.classList.toggle("restrictScroll");
+  html.classList.toggle("restrictScroll");
 });
 
 modalMenuButton.addEventListener("click", function() {
@@ -16,4 +18,5 @@ modalMenuButton.addEventListener("click", function() {
   menuModal.classList.toggle("hide");
   modalMenuButton.classList.remove("is-active");
   body.classList.toggle("restrictScroll");
+  html.classList.toggle("restrictScroll");
 });

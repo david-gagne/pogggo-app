@@ -13,7 +13,7 @@ body {
 }
 
 .restrictScroll {
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 .header {
@@ -76,11 +76,116 @@ body {
   padding-bottom: 5px;
 }
 
+.content__title--faqs-page {
+  font-size: 30px;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+.content__title--contact-page {
+  font-size: 30px;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+.image-me {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.content__title--about-page {
+  font-size: 30px;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+.section__about {
+  width: 280px;
+  margin: 0 auto;
+}
+
+.section__about--text {
+  font-size: 16px;
+  line-height: 40px;
+  letter-spacing: 1px;
+}
+
+.section__about--text-small {
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.mission {
+  font-weight: bold;
+}
+
+.podcast-link {
+  color: #87FF86;
+  background-color: #020402;
+  text-decoration: none;
+  padding: 1px;
+}
+
+.section__about--work {
+  width: 100%;
+  list-style-type: none;
+  padding: 0;
+}
+
+.section__about--work-photos {
+  width: 280px;
+}
+
+.email {
+  width: 280px;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 25px;
+}
+
+.email__address {
+  width: 280px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 20px;
+}
+
+.email__address > a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.email__address:hover {
+  text-decoration: underline;
+}
+
 .divider {
   width: 280px;
   margin: 10px auto;
   height: 2px;
   background-color: #020402;
+}
+
+.faqs {
+  width: 280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.question {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 50px auto;
+}
+
+.answer {
+  font-size: 14px;
+  line-height: 30px;
 }
 
 .pricing__options {
@@ -239,7 +344,7 @@ input[type="checkbox"]#toggle:checked ~ label[for="toggle"]::before {
   height: 40px;
   border: 2px solid #020402;
   border-radius: 3px;
-  background-color: inherit;
+  background-color: #87FF86;
   font-size: 20px;
   font-weight: 700;
   font-family: inherit;
@@ -249,7 +354,7 @@ input[type="checkbox"]#toggle:checked ~ label[for="toggle"]::before {
 }
 
 .copyright {
-  font-size: 11px;
+  font-size: 10px;
   font-family: inherit;
   position: absolute;
   bottom: 1%;
@@ -281,6 +386,11 @@ input[type="checkbox"]#toggle:checked ~ label[for="toggle"]::before {
 
 .menu__link {
   color: inherit;
+  text-decoration: none;
+}
+
+.menu__item:hover {
+  text-decoration: underline;
 }
 
 .color__green {
@@ -330,6 +440,39 @@ input[type="checkbox"]#toggle:checked ~ label[for="toggle"]::before {
   .content__title--pricing-page {
     font-size: 50px;
     width: 440px;
+  }
+
+  .section__about {
+    width: 440px;
+  }
+
+  .section__about--text {
+    font-size: 20px;
+  }
+
+   .titles__work {
+    font-size: 24px;
+  }
+
+  .section__about--work-photos {
+    width: 440px;
+  }
+
+  .section__about--text-small {
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+
+  .faqs {
+    width: 440px;
+  }
+
+  .question {
+    font-size: 30px;
+  }
+
+  .answer {
+    font-size: 20px;
   }
 
   .content__title--parenthesis {
@@ -459,6 +602,18 @@ input[type="checkbox"]#toggle:checked ~ label[for="toggle"]::before {
     height: 4px;
   }
 
+  .faqs {
+    width: 860px;
+  }
+
+  .question {
+    font-size: 40px;
+  }
+
+  .answer {
+    font-size: 30px;
+  }
+
   .divider--grid {
     width: 100%;
   }
@@ -469,6 +624,28 @@ input[type="checkbox"]#toggle:checked ~ label[for="toggle"]::before {
 
   .option__yearly {
     font-size: 50px;
+  }
+
+  .section__about {
+    width: 860px;
+  }
+
+  .section__about--text {
+    font-size: 25px;
+  }
+
+
+  .section__about--work-photos {
+    width: 860px;
+  }
+
+  .titles__work {
+   font-size: 30px;
+ }
+
+  .section__about--text-small {
+    font-size: 18px;
+    letter-spacing: 1px;
   }
 
   .section__pricing--selector {

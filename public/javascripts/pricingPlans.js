@@ -18,9 +18,9 @@ toggleSwitch.addEventListener("click", function(event) {
     savings[2].classList.toggle("showSavings");
     yearly.classList.toggle("inactive");
     monthly.classList.toggle("inactive");
-    price1.innerText = "$479.99";
-    price2.innerText = "$1259.99";
-    price3.innerText = "$2159.99";
+    price1.innerText = "$959.99";
+    price2.innerText = "$2519.99";
+    price3.innerText = "$4319.99";
 
   } else {
     savings[0].classList.toggle("showSavings");
@@ -28,8 +28,8 @@ toggleSwitch.addEventListener("click", function(event) {
     savings[2].classList.toggle("showSavings");
     yearly.classList.toggle("inactive");
     monthly.classList.toggle("inactive");
-    price1.innerText = "$49.99";
-    price2.innerText = "$149.99";
-    price3.innerText = "$299.99";
+    price1.innerText = "$99.99";
+    price2.innerText = "$299.99";
+    price3.innerText = "$599.99";
   }
 });

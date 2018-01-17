@@ -56,28 +56,25 @@ body {
 }
 
 .content__title {
-  text-align: center;
-  font-size: 24px;
-  margin: 60px 0;
-  padding: 20px;
+  text-align: left;
+  font-size: 10vw;
+  margin: 0 auto;
+  padding-left: 6vw;
 }
+
+/* TODO: fix styles to scale properly using viewport height and width units */
 
 .content__title--target {
   text-decoration: underline;
 }
 
 .content__title--parenthesis {
-  font-size: inherit;
+  font-size: 10vw;
   margin-bottom: 5px;
-  width: 280px;
+  width: 100vw;
   padding-top: 5px;
-}
-
-.content__title--pricing-page {
-  font-size: 30px;
-  margin: 0 auto;
-  text-align: left;
-  padding-bottom: 5px;
+  text-align: center;
+  padding-left: 0;
 }
 
 .content__title--faqs-page {
@@ -377,6 +374,12 @@ input[type="checkbox"]#toggle:checked ~ label[for="toggle"]::before {
   background-color: #87FF86;
 }
 
+.button__select--mvp {
+  width: 208px;
+  position: relative;
+  top: -25px;
+}
+
 .button__label {
   width: 100%;
   height: 100%;
@@ -528,6 +531,12 @@ input[type="checkbox"]#toggle:checked ~ label[for="toggle"]::before {
     padding-bottom: 20px;
   }
 
+  .section__pricing--mvp {
+    display: block;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
   .section__features {
     width: 100%;
   }
@@ -610,6 +619,12 @@ input[type="checkbox"]#toggle:checked ~ label[for="toggle"]::before {
     margin: 0 auto;
     padding-bottom: 20px;
     margin-bottom: 200px;
+  }
+
+  .section__pricing--mvp {
+    display: block;
+    margin-bottom: 0;
+    padding-bottom: 0;
   }
 
   .container__pricing {
@@ -719,6 +734,13 @@ input[type="checkbox"]#toggle:checked ~ label[for="toggle"]::before {
     height: 70px;
     font-size: 44px;
     border: 4px solid #020402;
+  }
+
+  .button__select--mvp {
+    width: 308px;
+    position: relative;
+    top: -25px;
+    font-size: 34px;
   }
 
   .note {

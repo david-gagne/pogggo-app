@@ -1,0 +1,48 @@
+<% include partials/header %>
+
+<div class="content">
+  <h1 class="content__title content__title--pricing-page">
+    Pricing.
+  </h1>
+  <h1 class="content__title content__title--pricing-page content__title--parenthesis">(Good, Golly, Gosh)</h1>
+
+  <div class="divider"></div>
+
+<div class="section section__pricing section__pricing--mvp">
+  <div>
+    <div class="container__pricing">
+      <p class="minutes">500
+        <span class="minutes__acronym">mins</span>
+      </p>
+      <p class="frequency">Per month</p>
+      <p class="price">$79.99</p>
+    </div>
+    <form id="upload" action="/upload" method="post" enctype="multipart/form-data">
+      <input onchange="this.form.submit()" name="userUpload" form="upload" id="audioUpload" class="hidden" type="file" accept=".mp3, .m4a, .mp4" multiple>
+      <label class="button__select button__select--mvp" for="audioUpload">Upload Audio</label>
+      <p class="centered"><%= typeof msg !== 'undefined' ? msg : ""; %></p>
+    </form>
+    <p><%= typeof file !== 'undefined' ? file : ""; %></p>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<div class="section__features">
+  <p class="features">No contract</p>
+  <p class="features">Plain Text</p>
+  <p class="features">Rich Text</p>
+  <p class="features">PDF</p>
+  <p class="features">Apple Pages</p>
+  <p class="features">MS Word</p>
+</div>
+
+</div>
+
+
+
+
+
+
+<% include partials/menu %>
+<% include partials/footer %>

@@ -74,7 +74,7 @@ router.post('/upload', function(req, res) {
 
 // GET pricing page
 router.get('/pricing', function(req, res) {
-  res.render('pricingMVP');
+  res.render('pricingMvp');
 });
 
 // GET FAQs page

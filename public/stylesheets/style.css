@@ -6,7 +6,7 @@ html, body {
   font-family: "Nunito", sans-serif;
   color: #020402;
   -webkit-appearance: none;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .restrictScroll {

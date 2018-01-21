@@ -1,10 +1,46 @@
-<% include partials/header %>
+<% include partials/headerNoMenu %>
 
 <div class="content">
-  <h1 class="content__title">
-    checkout
+  <h1 class="content__title content__title--checkout">
+    <p class="centered"><%= typeof msg !== 'undefined' ? msg : ""; %></p>
   </h1>
-  <p>Thank you!</p>
+
+  <div class="divider"></div>
+
+  <div class="section section--centered">
+    <h2>Here's what you can expect</h2>
+    <ul>
+      <li>
+        <h4>Audio files transcribed in under 24 hours</h4>
+      </li>
+      <li>
+        <h4>300 minute/month upload allotment</h4>
+      </li>
+      <li>
+        <h4>Transcription by human beings, not software</h4>
+      </li>
+    </ul>
+  </div>
+
+  <div class="checkout">
+    <%# begin stripe checkout flow %>
+    <form id="stripeCheckout" action="/charge" method="POST">
+      <script
+      src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+      data-key="stripePublishableKey"
+      data-amount="7999"
+      data-name="Grindfusion PBC, Inc."
+      data-description="Audio transcription by Pogggo"
+      data-image="images/marketplace.png"
+      data-locale="auto">
+      </script>
+      <script>
+        // Hide default Stipe button
+        document.getElementsByClassName("stripe-button-el")[0].style.display = "none";
+      </script>
+      <button class="button button--checkout" type="submit">Pay Now</button>
+    </form>
+  </div>
 </div>
 
 <% include partials/menu %>

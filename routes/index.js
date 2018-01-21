@@ -1,11 +1,13 @@
 var express = require('express');
 var router = express.Router();
+var keys = require('./configuration/keys.js');
+var stripe = require('stripe')('keys.stripeSecretKey');
 
 var multer = require('multer');
 var path = require('path');
 
 // set storage engine
-var storage = multer.diskStorage({
+let storage = multer.diskStorage({
   destination: 'public/uploads/',
   filename: function(req, file, callback) {
     callback(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));
@@ -38,7 +40,9 @@ function checkFileType(file, callback) {
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index');
+  res.render('index', {
+    stripePublishableKey: keys.stripePublishableKey
+  });
 });
 
 /* POST home page. */
@@ -54,10 +58,15 @@ router.post('/upload', function(req, res) {
           msg: 'Error: No File Selected!'
         });
       } else {
-        res.render('index', {
-          msg: 'File Uploaded!',
+        res.render('checkout', {
+          msg: 'We\'ve received your audio!',
           file: `uploads/${req.file.filename}`
         });
+
+        // res.render('index', {
+        //   msg: 'File Uploaded!',
+        //   file: `uploads/${req.file.filename}`
+        // });
       }
     }
   });
@@ -69,19 +78,41 @@ router.get('/pricing', function(req, res) {
 });
 
 // GET FAQs page
-router.get("/frequently-asked-questions", function(req, res) {
+router.get('/frequently-asked-questions', function(req, res) {
   res.render('faqs');
 });
 
 // GET contact page
-router.get("/contact", function(req, res) {
+router.get('/contact', function(req, res) {
   res.render('contact');
 });
 
 // GET about page
-router.get("/about", function(req, res) {
+router.get('/about', function(req, res) {
   res.render('about');
 });
 
+router.get('/success', function(req, res) {
+  res.render('success');
+});
+
+// POST charge page
+router.post('/charge', function(req, res) {
+  let amount = 7999;
+
+  stripe.customers.create({
+    email: req.body.stripeEmail,
+    source: req.body.stripeToken
+  }).then(function(customer) {
+    return stripe.charges.create({
+      amount: amount,
+      description: 'Audio transcription',
+      currency: 'usd',
+      customer: customer.id
+    }).then(function() {
+      res.render('success');
+    });
+  })
+});
 
 module.exports = router;

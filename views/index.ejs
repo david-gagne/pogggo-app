@@ -7,7 +7,7 @@
 
   <form id="upload" action="/upload" method="post" enctype="multipart/form-data">
     <input onchange="this.form.submit()" name="userUpload" form="upload" id="audioUpload" class="hidden" type="file" accept=".mp3, .m4a, .mp4" multiple>
-    <label class="button__select" for="audioUpload">Upload Audio</label>
+    <label class="button button__select" for="audioUpload">Upload Audio</label>
     <p class="centered"><%= typeof msg !== 'undefined' ? msg : ""; %></p>
   </form>
   <p><%= typeof file !== 'undefined' ? file : ""; %></p>

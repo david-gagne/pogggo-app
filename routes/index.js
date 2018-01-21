@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var keys = require('./configuration/keys.js');
+var keys = require('../configuration/keys.js');
 var stripe = require('stripe')('keys.stripeSecretKey');
 
 var multer = require('multer');

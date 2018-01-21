@@ -48,6 +48,15 @@ html, body {
   height: 20px;
 }
 
+.home__link {
+  text-decoration: none;
+  font-size: 5vh;
+  padding-left: 30px;
+  color: inherit;
+  font-weight: 700;
+  font-family: "Comfortaa", sans-serif;
+}
+
 .content {
   margin: 0 auto
 }

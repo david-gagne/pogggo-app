@@ -31,11 +31,7 @@ html, body {
 }
 
 .logo {
-  width: 100px;
-  height: inherit;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: inline-block;
   padding-left: 10px;
 }
 
@@ -482,7 +478,7 @@ input[type="checkbox"]#toggle:checked ~ label[for="toggle"]::before {
   height: 100%;
   background-color: #020402;
   color: #fff;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: -50%;
 }
@@ -525,6 +521,8 @@ input[type="checkbox"]#toggle:checked ~ label[for="toggle"]::before {
   transition: 0.3s;
   right: -50%;
 }
+
+
 
 .note {
   font-size: 11px;

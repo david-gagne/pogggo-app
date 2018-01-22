@@ -2,8 +2,6 @@ let menuBars = document.querySelector("body > div.header > div.header.header--ri
 let menuButton = document.querySelector("body > div.header > div.header.header--right > button");
 let menuModal = document.querySelector("body > div.menu");
 let modalMenuButton = document.getElementById("modalMenuButton");
-let body = document.querySelector("body");
-let html = document.querySelector("html");
 
 menuBars.addEventListener("click", function() {
   menuModal.classList.remove("hide");

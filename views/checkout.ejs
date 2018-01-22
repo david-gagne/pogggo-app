@@ -27,7 +27,7 @@
     <form id="stripeCheckout" action="/charge" method="POST">
       <script
       src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-      data-key="stripePublishableKey"
+      data-key="<%=stripePublishableKey%>"
       data-amount="7999"
       data-name="Grindfusion PBC, Inc."
       data-description="Audio transcription by Pogggo"

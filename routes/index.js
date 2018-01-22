@@ -1,10 +1,11 @@
 var express = require('express');
 var router = express.Router();
-var keys = require('../configuration/keys.js');
-var stripe = require('stripe')('keys.stripeSecretKey');
 
 var multer = require('multer');
 var path = require('path');
+
+var keys = require('../configuration/keys.js');
+var stripe = require('stripe')(keys.stripeSecretKey);
 
 // set storage engine
 let storage = multer.diskStorage({
@@ -40,9 +41,7 @@ function checkFileType(file, callback) {
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', {
-    stripePublishableKey: keys.stripePublishableKey
-  });
+  res.render('index');
 });
 
 /* POST home page. */
@@ -60,7 +59,8 @@ router.post('/upload', function(req, res) {
       } else {
         res.render('checkout', {
           msg: 'We\'ve received your audio!',
-          file: `uploads/${req.file.filename}`
+          file: `uploads/${req.file.filename}`,
+          stripePublishableKey: keys.stripePublishableKey
         });
 
         // res.render('index', {

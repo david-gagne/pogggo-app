@@ -1,3 +1,7 @@
+<h1>This application is no longer active or maintained. A bygone era of toying around.</h1>
+<h2>I'm repurposing the name. Ask me where you can find the new Pogggo, @buildpax on Twitter.</h2>
+
+
 ![alt text](https://raw.githubusercontent.com/david-gagne/pogggo-app/master/public/images/pogggoLogoSquareFavicon.png)
 
 Podcast, broadcast, and video transcription service for content entrepreneurs ― Pogggo.com
